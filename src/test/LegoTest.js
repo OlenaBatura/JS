@@ -72,7 +72,7 @@ describe("Lego Shopping Scenario", function () {
             userPopUp.clickOnContinueButton();
             browser.ignoreSynchronization = true;
             browser.waitForAngular();
-            productPage.clickOnBasketIcon();
+            productPage.clickAddIntoBasketButton();
             header.clickOnBasketButton();
             waiter.waitForElementPresense(basket.productCode(), 5000);
             expect(basket.productCode().getText()).toBe(categoryCatalogPage.concreteProductIdText);

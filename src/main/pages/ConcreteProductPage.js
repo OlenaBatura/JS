@@ -9,7 +9,7 @@ var ConcreteProductPage = function () {
     };
 
     this.addIntoBasketButton = function () {
-      return element(by.xpath("//div[@class='product-features__expand--hidden']//button[@class='add-to-cart-button']"));
+      return element(by.xpath("//div[@class='overview__pickers']//button[@class='add-to-cart-button']"));
     };
 
     this.addIntoWishListButton = function () {
@@ -27,6 +27,7 @@ var ConcreteProductPage = function () {
 
    this.clickAddIntoBasketButton = function () {
      waiter.waitForElementVisibility(this.addIntoBasketButton(),5000);
+     browser.sleep(5000);
      this.addIntoBasketButton().click();
    };
 

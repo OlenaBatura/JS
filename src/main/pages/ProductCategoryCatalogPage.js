@@ -1,3 +1,5 @@
+var waiter = require("../utils/Waiters");
+
 var ProductCategoryCatalogPage = function () {
     this.productCategoriesPageHeaderText = "Products";
 
@@ -9,6 +11,7 @@ var ProductCategoryCatalogPage = function () {
     };
 
     this.clickOnStarWarsItem = function () {
+    waiter.waitForElementVisibility(this.starWarCategoryItem(),5000);
         this.starWarCategoryItem().click();
     };
 };
